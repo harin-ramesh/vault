@@ -13,9 +13,9 @@ public class Worker implements Runnable {
     @Override
     public void run(){
         while(true){
+            int x = container.pluck();
+            if (x==-1) break;
             synchronized(lock){
-                int x = container.pluck();
-                if (x==-1) break;
                 Main.curr += x;               
             }
         }
