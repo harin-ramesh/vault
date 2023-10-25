@@ -32,3 +32,14 @@ public class Main {
 
 	}
 }
+
+
+// cmd + j -> to open and close bottom bar
+// > save project -> to save project in project manager
+// > edit project -> to update path or delete project from project manager
+// shift + cmd + x -> extensions
+// shift + cmd + E -> explorer
+// shift + cmd + R -> remote explorer
+// control + ` -> to open terminal
+// cmd + shift + n -> new window
+// cmd + m -> maximize window
