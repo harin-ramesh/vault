@@ -15,6 +15,6 @@ public class Reader implements Runnable{
         } catch (Exception e){
             throw new RuntimeException(e);
         }
-        System.out.println("Reader reads, Name: " + name);
+        System.out.println(Thread.currentThread().getName() + " Reader reads, Name: " + name);
     }
 }

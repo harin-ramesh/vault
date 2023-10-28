@@ -8,29 +8,19 @@ public class Main {
 
         Thread r1 = new Thread(new Reader(store));
         Thread r2 = new Thread(new Reader(store));
-        Thread r3 = new Thread(new Reader(store));
-        Thread r4 = new Thread(new Reader(store));
-        Thread r5 = new Thread(new Reader(store));
-        Thread r6 = new Thread(new Reader(store));
-        Thread w1 = new Thread(new Writer(store));
+
+        // Thread w1 = new Thread(new Writer(store));
 
         r1.start();
         r2.start();
-        r3.start();
-        r4.start();
-        r5.start();
+        // w1.start();
 
-        w1.start();
-
-        r6.start();
-
-        r1.join();
+        r1.join();        
         r2.join();
-        r3.join();
-        r4.join();
-        r5.join();
-        r6.join();
-        w1.join();
+        // w1.join();
+
+        // when two reader threads  tries to updgrade lock to write lock it can lead to deadlock, to acquire dead lock one has to release read lock.
+        // so while upgrading lock, best practice is release the current lock.
 
     }
 }
