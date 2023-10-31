@@ -25,7 +25,7 @@ public class Worker implements Runnable{
                 task =  taskQueue.take();
                 long curr = System.currentTimeMillis();
                 if (curr >= task.getFireTime()) {
-                    System.out.println(curr+" | "+task.getFireTime());
+                    System.out.print("[" + curr+" | "+task.getFireTime()+"] ");
                     task.run();
                     if (task.getSubSequentGapInSec() > 0) {
                         task.setFireTime(System.currentTimeMillis() + task.getSubSequentGapInSec()*1000);
